@@ -1,0 +1,23 @@
+{
+  "name": "xcord-presence",
+  "version": "1.0.0",
+  "description": "Discord Rich Presence for Xcode",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dagg-1/Xcord-Presence.git"
+  },
+  "author": "Dagg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dagg-1/Xcord-Presence/issues"
+  },
+  "homepage": "https://github.com/dagg-1/Xcord-Presence#readme",
+  "dependencies": {
+    "applescript": "^1.0.0",
+    "discord-rpc": "^3.1.0"
+  }
+}
