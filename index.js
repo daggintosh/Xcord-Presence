@@ -67,6 +67,16 @@ async function setRP() {
                 case "xcodeproj":
                     language = "project settings"
                     break
+                case "plist":
+                    language = "properties"
+                    break
+                case "xcdatamodel":
+                    language = "Core Data container"
+                    break
+                case "xcassets":
+                    language = "xcassets"
+                default:
+                    language = "miscellaneous"
             };
             let details = [
                 rtn[0], // Current document
@@ -81,23 +91,19 @@ async function setRP() {
                 target = "imac"
                 friendlytext = "macOS"
             }
-            else if(target.startsWith("iPhone")) {
-                let split = target.split(" ")
-                target = split[0]
-                friendlytext = "the iPhone"
-            }
-            else if(target.includes("iPhone")) {
-                friendlytext = target
+            else if(target.includes("iphoneos")) {
                 target = "iphone"
+                friendlytext = "iOS"
             }
             else {
                 target = "imac"
                 friendlytext = "misc device"
             }
+
             
             client.setActivity({
                 details: `${details[0]}`,
-                state: `Project: ${details[1]}`,
+                state: `${details[1]}`,
                 startTimestamp,
                 largeImageKey: `${details[4].replace(/\s+/g, '').toLowerCase()}`,
                 largeImageText: `Editing a ${details[4]} file`,
