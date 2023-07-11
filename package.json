@@ -18,6 +18,6 @@
   "homepage": "https://github.com/dagg-1/Xcord-Presence#readme",
   "dependencies": {
     "applescript": "^1.0.0",
-    "discord-rpc": "^3.1.0"
+    "discord-rpc": "^3.2.0"
   }
 }
